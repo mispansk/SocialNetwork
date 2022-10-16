@@ -12,8 +12,8 @@ namespace SocialNetwork.Tests
     {
        
         [Fact]
-        public void SendFriendTest1() // этот тест не пройдет, т.к. user 1 имеет email 123@mail.ru
-        {                             // будет ошибка ThisIException (себя не нужно добавлять в друзья)
+        public void SendFriendTest1() // СЌС‚РѕС‚ С‚РµСЃС‚ РЅРµ РїСЂРѕР№РґРµС‚, С‚.Рє. user 1 РёРјРµРµС‚ email 123@mail.ru
+        {                             // Р±СѓРґРµС‚ РѕС€РёР±РєР° ThisIException (СЃРµР±СЏ РЅРµ РЅСѓР¶РЅРѕ РґРѕР±Р°РІР»СЏС‚СЊ РІ РґСЂСѓР·СЊСЏ)
             var service = new FrendService(); 
 
             var entity = service.SendFriend(new BLL.Models.FriendSendingData() { SenderId = 1, RecipientEmail = "123@mail.ru" });
@@ -21,7 +21,7 @@ namespace SocialNetwork.Tests
         }
 
         [Fact]
-        public void SendFriendTest2() // этот тест пройдет, т.к. user 1 имеет друга 321@mail.ru
+        public void SendFriendTest2() // СЌС‚РѕС‚ С‚РµСЃС‚ РїСЂРѕР№РґРµС‚, С‚.Рє. user 1 РёРјРµРµС‚ РґСЂСѓРіР° 321@mail.ru
         {
             var service = new FrendService();
 
